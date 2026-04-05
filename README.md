@@ -27,6 +27,6 @@ Tasks are saved on a JSON file to keep the information even after closing the pr
 Clone the repository and run the script
 
 ```bash
-git clone https://github.com/your-username/task-manager.git
+git clone https://github.com/Huntervelasco/Task-manager.git
 cd task-manager
 python task_manager.py
