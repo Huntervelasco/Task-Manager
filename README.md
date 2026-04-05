@@ -28,5 +28,5 @@ Clone the repository and run the script
 
 ```bash
 git clone https://github.com/Huntervelasco/Task-manager.git
-cd task-manager
+cd code
 python task_manager.py
