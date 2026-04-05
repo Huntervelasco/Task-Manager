@@ -1,6 +1,7 @@
 # Task-Manager
 ---
 ## Functionality
+
 This is a task manager that allows you to create, visualize, edit and complete or delete tasks.
 This tasks are saved on a JSON file to keep the information even after closing the program.
 ---
