@@ -127,7 +127,7 @@ def marcar_completada():
 
 
 def editar_tarea():
-    option_3 = input("Escribe '1' para ingresar el nombre de la tarea\nEscribe '2' para ingresar el numero de la tarea")
+    option_3 = input("Escribe '1' para ingresar el nombre de la tarea\nEscribe '2' para ingresar el numero de la tarea\n ")
 
     if not option_3:
         print("Respuesta invalida")
@@ -178,7 +178,52 @@ def editar_tarea():
                     print("respuesta invalida")
                     return
 
-        print("No se encontro la tarea")
+    elif option_3 == 2:
+        num_task = input("Dame el numero de la tarea: ")
+        if not num_task:
+            print("respuesta invalida")
+
+
+        try:
+            num_task = int(num_task)
+
+        except ValueError:
+            print("respuesta invalida")
+
+        for tarea in tareas:
+            if tarea['id'] == num_task:
+                option_31 = input("Quieres cambiar \n(1) El nombre de la tarea \n(2) EL estado\n")
+                try:
+                    option_31 = int(option_31)
+                    if option_31 < 1 or option_31 > 2:
+                        print("respuesta invalida")
+                        return
+
+                except ValueError:
+                    print("respuesta invalida")
+                if option_31 == 1:
+                    new_name = input("Dame el nuevo nombre de la tarea: ")
+                    if not new_name:
+                        print("respuesta invalida")
+                        return
+                    tarea['titulo'] = new_name
+                    print(f"Tarea cambiada, el nuevo nombre es : {new_name}")
+                    guardar_datos()
+                    return
+                elif option_31 == 2:
+                    new_estado = input("Dame el nuevo estado de la tarea: ")
+                    if not new_estado:
+                        print("respuesta invalida")
+                        return
+                    tarea['estado'] = new_estado
+                    print(f"El estado ha sido cambiado exitosamente a {new_estado}")
+                    guardar_datos()
+                    return
+    else:
+        print("respuesta invalida")
+        return
+
+
 
 def eliminar_tarea():
     global conta_id
