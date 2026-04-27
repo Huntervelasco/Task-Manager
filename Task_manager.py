@@ -43,7 +43,7 @@ conta_id = 1
 def mostrar_tareas():
     if not tareas:
         print("No hay tareas por el momento")
-        return  #funciona como freno, para que lo siguiente de la funcion no sea ejecutado, solo si la validacion se cumple
+        return  #funciona como freno, para que lo siguiente de la funcion no sea ejecutado, solo si la validacion se cumple zzz
 
     for tarea in tareas:   #“Para cada elemento dentro de la lista tareas, guárdalo temporalmente en la variable tarea.
         print(f"[{tarea['id']}]  {tarea['titulo']} - {tarea['estado']}")
@@ -140,7 +140,7 @@ def editar_tarea():
     except ValueError:
         print("Respuesta invalida")
 
-    if option_3 == 1:  #falta la OPCION 2, ingresar el numero de la tarea
+    if option_3 == 1:  #fYa esta la opcion 2 hecha y funcional
         name_task = input("Dame el nombre de la tarea: ")
         for tarea in tareas:
             if tarea['titulo'] == name_task:
